@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedra, Papel ou Tesoura</title>
+</head>
+<body>
+  <script>
+    const opcoes = ["pedra", "papel", "tesoura"];
+
+    // Usuário escolhe
+    let usuario = prompt("Escolha: pedra, papel ou tesoura").toLowerCase();
+
+    if (!opcoes.includes(usuario)) {
+      console.log("Opção inválida! Recarregue a página e tente de novo.");
+    } else {
+      // Computador escolhe aleatório
+      const computador = opcoes[Math.floor(Math.random() * 3)];
+
+      console.log("Você escolheu: " + usuario);
+      console.log("O computador escolheu: " + computador);
+
+      if (usuario === computador) {
+        console.log("Empate!");
+      } else if (
+        (usuario === "pedra" && computador === "tesoura") ||
+        (usuario === "papel" && computador === "pedra") ||
+        (usuario === "tesoura" && computador === "papel")
+      ) {
+        console.log("Você venceu!");
+      } else {
+        console.log("O computador venceu!");
+      }
+    }
+  </script>
+</body>
+</html>
