@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jogo da Adivinhação</title>
+</head>
+<body>
+    <script>
+        // Número secreto de 1 a 20
+        var numeroSecreto = Math.floor(Math.random() * 20) + 1;
+        var chute;
+
+        // continua até o usuário acertar
+        while (chute != numeroSecreto) {
+            chute = parseInt(prompt("Digite um número de 1 a 20:"));
+
+            if (chute > numeroSecreto) {
+                console.log("O número secreto é menor.");
+            } else if (chute < numeroSecreto) {
+                console.log("O número secreto é maior.");
+            } else {
+                console.log("Parabéns! Você acertou o número secreto:", numeroSecreto);
+            }
+        }
+    </script>
+</body>
+</html>
