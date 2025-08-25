@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Triângulo de Asteriscos</title>
+</head>
+<body>
+  <script>
+   
+    let linhas = parseInt(prompt("Digite o número de linhas do triângulo:"));
+
+    if (isNaN(linhas) || linhas <= 0) {
+      console.log("Digite um número válido maior que 0!");
+    } else {
+      for (let i = 1; i <= linhas; i++) {
+        console.log("*".repeat(i));
+      }
+    }
+  </script>
+</body>
+</html>
