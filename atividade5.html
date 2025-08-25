@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soma da Série</title>
+</head>
+<body>
+    <h1>Soma da Série 1 + 11 + 111 + ...</h1>
+    
+    <script>
+        // pede ao usuário o número de termos
+        var n = parseInt(prompt("Digite a quantidade de termos:"));
+        var soma = 0;
+        var termo = 1;
+
+        for (var i = 1; i <= n; i++) {
+            console.log(termo); // mostra cada termo
+            soma = soma + termo; // acumula a soma
+            termo = termo * 10 + 1; // próximo termo da série
+        }
+
+        console.log("Soma da série:", soma);
+    </script>
+</body>
+</html>
